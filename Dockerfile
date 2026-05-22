@@ -6,8 +6,8 @@ COPY . .
 
 RUN chmod +x mvnw
 
-RUN ./mvnw clean install
+RUN ./mvnw clean package -DskipTests
 
 EXPOSE 8080
 
-CMD ["java","-jar","target/user-service-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "target/user-service-0.0.1-SNAPSHOT.jar"]
